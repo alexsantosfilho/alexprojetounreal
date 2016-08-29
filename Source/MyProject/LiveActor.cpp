@@ -47,7 +47,7 @@ void ALiveActor::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Oth
 
 		AMyCharacter* MyCharacter = Cast<AMyCharacter>(OtherActor);
 		MyCharacter->SetLife(MyCharacter->GetLife() + LifeAmount);
-		UE_LOG(LogTemp, Warning, TEXT("Life = %d"), MyCharacter->GetLife());
+		UE_LOG(LogTemp, Warning, TEXT("Life = %d /10"), MyCharacter->GetLife());
 		Destroy();
 	}
 

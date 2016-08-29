@@ -32,7 +32,7 @@ void AMyActor::Tick(float DeltaTime)
 
 	FVector LocalizacaoAtual = GetActorLocation();
 	float DeltaHeight = (FMath::Sin(RunningTime + DeltaTime) - FMath::Sin(RunningTime));
-	LocalizacaoAtual.X += DeltaHeight * 400.0f;
+	LocalizacaoAtual.Y += DeltaHeight * 400.0f;
 	RunningTime += DeltaTime;
 	SetActorLocation(LocalizacaoAtual);
 

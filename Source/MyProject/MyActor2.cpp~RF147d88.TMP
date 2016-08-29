@@ -28,38 +28,30 @@ void AMyActor2::BeginPlay()
 // Called every frame
 void AMyActor2::Tick(float DeltaTime)
 {
-
-
 	Super::Tick(DeltaTime);
 
 	FVector LocalizacaoAtual = GetActorLocation();
+	FVector LocalizacaoAtual2 = GetActorLocation();
 
-	if (LocalizacaoAtual.X != LocalizacaoAtual.Y) {
-		float DeltaWidth = (FMath::Sin(RunningTime + DeltaTime + Cont) - FMath::Sin(RunningTime));
-		LocalizacaoAtual.X += DeltaWidth ;
-		RunningTime += DeltaTime += Cont = 1;
-		SetActorLocation(LocalizacaoAtual);
-	}
+	
 
 	if (LocalizacaoAtual.Y != LocalizacaoAtual.X) {
+		FVector LocalizacaoAtual = GetActorLocation();
 		float DeltaWidth = (FMath::Sin(RunningTime + DeltaTime) - FMath::Sin(RunningTime));
-		LocalizacaoAtual.Y += DeltaWidth;
-		RunningTime += DeltaTime += Cont = 10;
-		SetActorLocation(LocalizacaoAtual);
+		LocalizacaoAtual.Y += DeltaWidth * 150.0f;
+		RunningTime += DeltaTime;
+		SetActorLocation(LocalizacaoAtual2);
+
 	}
 
-
+	//else if	 (LocalizacaoAtual.X == 100.0f) {
+	//	float DeltaHeight = (FMath::Sin(RunningTime + DeltaTime) - FMath::Sin(RunningTime));
+	//	LocalizacaoAtual.X += DeltaHeight * 150.0f;
+		//RunningTime += DeltaTime;
+		//SetActorLocation(LocalizacaoAtual);
+	}
 
 }
-
-//else if (LocalizacaoAtual.X != LocalizacaoAtual.Y) {
-//float DeltaHeight = (FMath::Sin(RunningTime - DeltaTime) - FMath::Sin(RunningTime));
-//LocalizacaoAtual.X += DeltaHeight * 150.0f;
-//RunningTime += DeltaTime;
-//SetActorLocation(LocalizacaoAtual);
-//}
-
-//}
 
 
 

@@ -46,7 +46,7 @@ private:
 	UPROPERTY(EditAnywhere)
 	UArrowComponent* ArrowComp;
 	UPROPERTY(EditAnywhere)
-	int Life = 100;
+	int Life = 0;
 
 
 

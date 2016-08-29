@@ -3,16 +3,16 @@
 #pragma once
 
 #include "GameFramework/Actor.h"
-#include "MyActor2.generated.h"
+#include "MyActorp.generated.h"
 
 UCLASS()
-class MYPROJECT_API AMyActor2 :public AActor
+class MYPROJECT_API AMyActorp :public AActor
 {
 	GENERATED_BODY()
 
 public:
 	// Sets default values for this actor's properties
-	AMyActor2();
+	AMyActorp();
 
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -30,8 +30,6 @@ private:
 		float RunningTime = 1;
 	UPROPERTY(VisibleAnywhere, Category = Tick)
 		float RunningTime2 = 2;
-	UPROPERTY(VisibleAnywhere, Category = Tick)
-		int Cont = 0;
 
 
 	UFUNCTION()
