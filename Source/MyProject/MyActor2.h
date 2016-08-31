@@ -33,6 +33,8 @@ private:
 	UPROPERTY(VisibleAnywhere, Category = Tick)
 		int Cont = 0;
 
+	int Cont2 = 10;
+
 
 	UFUNCTION()
 		void OnHit(class AActor* OtherActor, class UPrimitiveComponent* OtherComp,

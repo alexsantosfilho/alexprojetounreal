@@ -42,9 +42,9 @@ void AMyActor2::Tick(float DeltaTime)
 	}
 
 	if (LocalizacaoAtual.Y != LocalizacaoAtual.X) {
-		float DeltaWidth = (FMath::Sin(RunningTime + DeltaTime) - FMath::Sin(RunningTime));
+		float DeltaWidth = (FMath::Sin(RunningTime + DeltaTime +) - FMath::Sin(RunningTime));
 		LocalizacaoAtual.Y += DeltaWidth;
-		RunningTime += DeltaTime += Cont = 1000;
+		RunningTime += DeltaTime += Cont2 = 1000;
 		SetActorLocation(LocalizacaoAtual);
 	}
 
